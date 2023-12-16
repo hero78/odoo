@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : https://store.webkul.com/license.html/ -->
+<odoo>
+    <data>
+        <template id="cinetpay_checkout_form">
+          <form t-att-action="api_url" method="post">
+              <input type="hidden" name="apikey" t-att-value="apikey" />
+              <input type="hidden" name="site_id" t-att-value="site_id" />
+              <input type="hidden" name="transaction_id" t-att-value="transaction_id" />
+              <input type="hidden" name="amount" t-att-value="amount" />
+              <input type="hidden" name="currency" t-att-value="currency" />
+              <input type="hidden" name="description" t-att-value="description" />
+              <input type="hidden" name="notify_url" t-att-value="notify_url" />
+              <input type="hidden" name="return_url" t-att-value="return_url" />
+              <input type="hidden" name="channels" t-att-value="channels" />
+              <input type="hidden" name="customer_name" t-att-value="customer_name" />
+              <input type="hidden" name="customer_surname" t-att-value="customer_surname" />
+              <input type="hidden" name="customer_phone_number" t-att-value="customer_phone_number" />
+              <input type="hidden" name="customer_email" t-att-value="customer_email" />
+              <input type="hidden" name="customer_address" t-att-value="customer_address" />
+              <input type="hidden" name="customer_city" t-att-value="customer_city" />
+              <input type="hidden" name="customer_country" t-att-value="customer_country" />
+              <input type="hidden" name="customer_state" t-att-value="customer_state" />
+              <input type="hidden" name="customer_zip_code" t-att-value="customer_zip_code" />
+              <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+          </form>
+        </template>
+    </data>
+</odoo>
